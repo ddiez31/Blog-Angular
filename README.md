@@ -1,5 +1,12 @@
 # Blog_Angular
 
+## Install environment
+
+```bash
+$ npm install
+$ ng serve --open
+```
+
 # AngularApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
