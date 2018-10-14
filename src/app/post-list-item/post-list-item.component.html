@@ -1,9 +1,14 @@
 <li class="list-group-item" [ngClass]="{'list-group-item': true,
-'list-group-item-success': loveIts > 0,
-'list-group-item-danger': loveIts < 0,
-'list-group-item-light': loveIts === 0 }">
-  <div style="width:20px;height:20px;background-color:red;" *ngIf="machineStatus === 'éteint'"></div>
+'list-group-item-success': post.loveIts > 0,
+'list-group-item-danger': post.loveIts < 0,
+'list-group-item-light': post.loveIts === 0 }">
+
+  <h6>{{ post.created_at | date: 'medium' }}</h6>
   <h4 [ngStyle]="{color: getColor()}">{{ post.title }}</h4>
   <p [ngStyle]="{color: getColor()}">{{ post.content }}</p>
-  <!-- <input type="text" class="form-control" [(ngModel)]="machineName"> -->
+
+  <h6>{{ post.loveIts }}</h6>
+  <button class="btn btn-success" (click)="loveIt()">Love it</button>
+  <button class="btn btn-danger" (click)="dontLoveIt()">Don't love it</button>
+
 </li>

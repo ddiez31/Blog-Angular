@@ -4,17 +4,17 @@ import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
-import { PostComponent } from "./post/post.component";
 import { PostListComponent } from "./post-list/post-list.component";
 import { PostListItemComponent } from "./post-list-item/post-list-item.component";
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PostComponent,
     PostListComponent,
-    PostListItemComponent
+    PostListItemComponent,
+    PostComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
