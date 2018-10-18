@@ -6,6 +6,13 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
+  post: {
+    title: string;
+    content: string;
+    loveIts: number;
+    created_at: Date;
+  };
+  
   posts = [
     {
       title: "1er post",
