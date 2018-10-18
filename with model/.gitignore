@@ -6,8 +6,6 @@
 /out-tsc
 
 # dependencies
-/without model/node_modules
-/with model/node_modules
 /node_modules
 
 # IDEs and editors

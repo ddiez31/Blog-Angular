@@ -1,7 +1,6 @@
 # Blog_Angular
 
 ## Install environment
-In each repository:
 
 ```bash
 $ npm install
