@@ -34,5 +34,9 @@ export class NewPostComponent implements OnInit {
     this.router.navigate(['/posts']);
   }
 
+  onListPost() {
+    this.router.navigate(["/posts"]);
+  }
+
 }
 

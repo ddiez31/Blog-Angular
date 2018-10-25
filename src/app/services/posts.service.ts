@@ -19,9 +19,16 @@ export class PostsService {
     this.postsSubject.next(this.posts);
   }
 
+  orderByDate() {
+    this.posts = this.posts.sort((a, b) => {
+      return b.created_at - a.created_at;
+    });
+  }
+
   savePosts() {
     try {
-      firebase.database().ref('/posts').set(this.posts);      
+      this.orderByDate();
+      firebase.database().ref('/posts').set(this.posts);
     } catch (error) {
       console.log(error);
     }
@@ -32,9 +39,10 @@ export class PostsService {
       firebase.database().ref('/posts')
         .on('value', (data: DataSnapshot) => {
           this.posts = data.val() ? data.val() : [];
+          this.orderByDate();
           this.emitPosts();
         }
-        );      
+        );
     } catch (error) {
       console.log(error);
     }
@@ -44,7 +52,7 @@ export class PostsService {
     try {
       this.posts.push(newPost);
       this.savePosts();
-      this.emitPosts();      
+      this.emitPosts();
     } catch (error) {
       console.log(error);
     }
@@ -54,7 +62,7 @@ export class PostsService {
     try {
       this.posts.values();
       this.savePosts();
-      this.emitPosts();      
+      this.emitPosts();
     } catch (error) {
       console.log(error);
     }
