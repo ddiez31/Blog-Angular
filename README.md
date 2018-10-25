@@ -4,7 +4,12 @@
 
 ```bash
 $ npm install
-$ ng serve --open
+```
+
+## Launch App
+
+```bash
+$ npm start
 ```
 
 # AngularApp
